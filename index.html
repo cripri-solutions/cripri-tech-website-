@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#071b33">
+  <meta name="description" content="CRIPRI builds practical digital systems and technology solutions for schools, organisations and businesses.">
+  <title>CRIPRI Technologies | Practical Digital Innovation</title>
+  <style>
+    :root{--navy:#071b33;--navy2:#0d2948;--teal:#12b8a6;--ink:#14243a;--muted:#617187;--paper:#f5f8fb;--white:#fff;--line:#e3eaf1}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--ink);line-height:1.6;background:#fff}
+    a{color:inherit;text-decoration:none}.container{width:min(1120px,calc(100% - 40px));margin:auto}
+    .topbar{background:var(--navy);color:#c9d8e8;font-size:.85rem;padding:8px 0}.topbar .container{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+    header{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+    .nav{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{display:flex;align-items:center;gap:11px;font-weight:850;letter-spacing:.08em;color:var(--navy);font-size:1.18rem}
+    .brand-mark{width:39px;height:39px;border-radius:12px;background:linear-gradient(145deg,var(--teal),#087e91);display:grid;place-items:center;color:white;font-weight:900;letter-spacing:-.06em}
+    .links{display:flex;align-items:center;gap:28px;font-size:.94rem;font-weight:650;color:#34465d}.links a:hover{color:#078f87}.nav-cta,.btn{display:inline-flex;align-items:center;justify-content:center;border-radius:9px;padding:12px 19px;font-weight:750;transition:.2s}
+    .nav-cta,.btn-primary{background:var(--teal);color:#042b35}.nav-cta:hover,.btn-primary:hover{background:#32d3c0;transform:translateY(-1px)}
+    .hero{background:radial-gradient(ellipse at 80% 20%,#164b65 0,transparent 38%),linear-gradient(125deg,var(--navy),#0b2947 70%,#0b3a4b);color:white;padding:100px 0 92px;overflow:hidden}
+    .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;align-items:center;gap:60px}.eyebrow{display:inline-flex;align-items:center;gap:9px;color:#70e5d8;text-transform:uppercase;letter-spacing:.14em;font-size:.76rem;font-weight:800}.eyebrow:before{content:"";width:24px;height:2px;background:currentColor}
+    h1{font-size:clamp(2.65rem,5.6vw,4.7rem);line-height:1.06;letter-spacing:-.045em;margin:20px 0}.hero p{font-size:1.12rem;color:#c6d5e4;max-width:610px;margin:0 0 30px}.hero-actions{display:flex;gap:13px;flex-wrap:wrap}.btn-outline{border:1px solid #68839c;color:#fff}.btn-outline:hover{background:#ffffff15}
+    .hero-panel{border:1px solid #477086;background:linear-gradient(145deg,#ffffff13,#ffffff06);border-radius:22px;padding:28px;box-shadow:0 25px 70px #0003}.panel-label{font-size:.78rem;text-transform:uppercase;letter-spacing:.13em;color:#8de9dd;font-weight:800}.panel-title{font-size:1.45rem;font-weight:800;margin:10px 0 20px}.capability{display:flex;gap:13px;align-items:flex-start;padding:14px 0;border-top:1px solid #ffffff20}.capability b{display:block}.capability span{font-size:.9rem;color:#c4d6e5}.cap-icon{width:36px;height:36px;flex:0 0 36px;border-radius:10px;background:#13b7a533;color:#75e8dc;display:grid;place-items:center;font-weight:900}
+    section{padding:82px 0}.section-head{max-width:700px;margin-bottom:38px}.kicker{color:#078f87;text-transform:uppercase;letter-spacing:.13em;font-size:.76rem;font-weight:850}.section-head h2{font-size:clamp(2rem,4vw,3rem);line-height:1.15;letter-spacing:-.035em;color:var(--navy);margin:12px 0}.section-head p{color:var(--muted);font-size:1.04rem;margin:0}
+    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center}.about-note{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:30px}.about-note h3{margin:0 0 10px;color:var(--navy);font-size:1.25rem}.about-note p{margin:0;color:var(--muted)}
+    .solutions{background:var(--paper)}.cards{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:27px;transition:.2s}.card:hover{transform:translateY(-4px);box-shadow:0 16px 36px #0d294812;border-color:#b9e7e2}.card-icon{width:46px;height:46px;border-radius:13px;background:#e5f8f5;color:#078f87;display:grid;place-items:center;font-size:1.25rem;font-weight:900}.card h3{color:var(--navy);margin:18px 0 8px;font-size:1.2rem}.card p{color:var(--muted);margin:0}.card .tag{display:inline-block;margin-top:17px;font-size:.78rem;font-weight:800;color:#078f87}
+    .vision{background:var(--navy);color:#fff}.vision-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}.vision h2{font-size:clamp(2rem,4vw,3rem);line-height:1.15;letter-spacing:-.035em;margin:12px 0}.vision p{color:#c3d2e0}.principles{display:grid;gap:13px}.principle{padding:17px 18px;border:1px solid #ffffff22;border-radius:12px;background:#ffffff09}.principle b{display:block;color:#8de9dd;margin-bottom:3px}.principle span{color:#c3d2e0;font-size:.94rem}
+    .contact-card{display:flex;align-items:center;justify-content:space-between;gap:30px;background:linear-gradient(110deg,#e9fbf8,#f4f8fc);border:1px solid #d8efeb;border-radius:20px;padding:36px}.contact-card h2{color:var(--navy);font-size:2rem;line-height:1.2;margin:0 0 8px}.contact-card p{color:var(--muted);margin:0}
+    footer{background:#041426;color:#b7c7d7;padding:30px 0;font-size:.88rem}.footer-row{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}.footer-brand{color:#fff;font-weight:850;letter-spacing:.08em}
+    @media(max-width:800px){.hero-grid,.about-grid,.vision-grid{grid-template-columns:1fr;gap:34px}.hero{padding:76px 0}.links{gap:14px}.nav-cta{display:none}}
+    @media(max-width:600px){.container{width:min(100% - 30px,1120px)}.nav{min-height:68px}.links{gap:12px;font-size:.82rem}.links a:nth-child(2){display:none}.hero{padding:64px 0}.cards{grid-template-columns:1fr}section{padding:64px 0}.contact-card{align-items:flex-start;flex-direction:column;padding:27px}.topbar .container{font-size:.77rem}}
+  </style>
+</head>
+<body>
+  <div class="topbar"><div class="container"><span>Technology with purpose. Innovation that works.</span><span>Building practical digital solutions</span></div></div>
+  <header><nav class="container nav" aria-label="Main navigation">
+    <a class="brand" href="#home" aria-label="CRIPRI home"><span class="brand-mark">C</span><span>CRIPRI</span></a>
+    <div class="links"><a href="#about">About</a><a href="#solutions">Solutions</a><a href="#vision">Our approach</a><a href="#contact">Contact</a></div>
+    <a class="nav-cta" href="#contact">Get in touch</a>
+  </nav></header>
+  <main>
+    <section class="hero" id="home"><div class="container hero-grid">
+      <div><span class="eyebrow">Digital innovation platform</span><h1>Technology built around real-world needs.</h1>
+        <p>CRIPRI develops practical digital systems that help schools, organisations and businesses manage information, people and everyday operations with greater confidence.</p>
+        <div class="hero-actions"><a class="btn btn-primary" href="#solutions">Explore our solutions</a><a class="btn btn-outline" href="#about">Discover CRIPRI</a></div>
+      </div>
+      <div class="hero-panel"><div class="panel-label">What we focus on</div><div class="panel-title">Useful technology. Thoughtful execution.</div>
+        <div class="capability"><div class="cap-icon">01</div><div><b>Education technology</b><span>Tools designed around the realities of school administration and student services.</span></div></div>
+        <div class="capability"><div class="cap-icon">02</div><div><b>Organisation platforms</b><span>Flexible digital experiences for institutions and growing organisations.</span></div></div>
+        <div class="capability"><div class="cap-icon">03</div><div><b>Applied innovation</b><span>Exploring hardware and software that solve practical problems.</span></div></div>
+      </div>
+    </div></section>
+    <section id="about"><div class="container about-grid">
+      <div class="section-head"><span class="kicker">About CRIPRI</span><h2>We turn practical ideas into digital solutions.</h2><p>CRIPRI is a technology initiative focused on building accessible, purposeful software and exploring technology that responds to the needs of people and institutions.</p></div>
+      <div class="about-note"><h3>Our commitment</h3><p>We believe good technology should make work clearer, information easier to manage and services more accessible. Our work is guided by real use cases, continuous learning and a focus on solutions that can grow with the people who use them.</p></div>
+    </div></section>
+    <section class="solutions" id="solutions"><div class="container">
+      <div class="section-head"><span class="kicker">What we're building</span><h2>Solutions for people and organisations.</h2><p>Our work brings together education management, organisation websites and emerging technology projects.</p></div>
+      <div class="cards">
+        <article class="card"><div class="card-icon">▦</div><h3>CRIPRI School Manager</h3><p>A school administration platform focused on helping schools organise essential information and day-to-day management activities.</p><span class="tag">Education management</span></article>
+        <article class="card"><div class="card-icon">◎</div><h3>CRIPRI Staff Manager</h3><p>A staff management solution designed to support organised staff records and controlled access for school teams.</p><span class="tag">Workforce management</span></article>
+        <article class="card"><div class="card-icon">⌁</div><h3>CRIPRI Student Biometric</h3><p>An initiative exploring student identification and attendance workflows using fingerprint technology and locally managed records.</p><span class="tag">Biometric innovation</span></article>
+        <article class="card"><div class="card-icon">◇</div><h3>Digital platforms & hardware</h3><p>Research and development into adaptable websites, connected systems and purpose-built technology for institutional needs.</p><span class="tag">Research & development</span></article>
+      </div>
+    </div></section>
+    <section class="vision" id="vision"><div class="container vision-grid">
+      <div><span class="eyebrow">Our approach</span><h2>Start with the problem. Build for the people.</h2><p>We aim to make technology understandable, useful and adaptable. That means listening to users, solving clearly defined problems and improving systems step by step.</p></div>
+      <div class="principles"><div class="principle"><b>Practical by design</b><span>Prioritise features that address genuine operational needs.</span></div><div class="principle"><b>Built to adapt</b><span>Think about maintainability, growth and different organisational contexts.</span></div><div class="principle"><b>People first</b><span>Keep usability, trust and responsible handling of information at the centre.</span></div></div>
+    </div></section>
+    <section id="contact"><div class="container"><div class="contact-card"><div><span class="kicker">Start a conversation</span><h2>Have an idea or a challenge?</h2><p>We welcome conversations about our work, partnerships and practical technology opportunities.</p></div><a class="btn btn-primary" href="mailto:">Contact CRIPRI</a></div></div></section>
+  </main>
+  <footer><div class="container footer-row"><span class="footer-brand">CRIPRI</span><span>Technology with purpose. Innovation that works.</span><span>© <span id="year">2026</span> CRIPRI. All rights reserved.</span></div></footer>
+</body>
+</html>
